@@ -114,9 +114,12 @@ class Zookeeper{
         this.name = name;
 
     }
-    feedAnimals(animals, food){
-        console.log(this.name + " is feeding " + food + " to " + animals.length + " animals of " + animalPopulation +
-        " total animals.");
+    feedAnimals(num, food){
+        console.log(this.name + " is feeding " + food + " to " + num.length + " animals of " + animalPopulation +
+            " total animals.");
+        for(var i = 0; i < animalPopulation.length; i++){
+            animalPopulation[i].eat(food);
+        }
     }
 }
 /*class Shape {
